@@ -7,6 +7,12 @@ export default function reducer(state, { type, payload }) {
         ...state,
         isAuth: payload
       };
+    case 'SIGNOUT_USE':
+      return {
+        ...state,
+        isAuth: false,
+        currentUser: null
+      };
     default:
       return state;
   }
