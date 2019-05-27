@@ -18,6 +18,8 @@ export default function reducer(state, { type, payload }) {
     case 'UPDATE_DRAFT_LOCATION':
       const { longitude, latitude } = payload;
       return { ...state, draft: { longitude, latitude } };
+    case 'DELETE_DRAFT':
+      return { ...state, draft: null };
     default:
       return state;
   }
